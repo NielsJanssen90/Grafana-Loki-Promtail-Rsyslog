@@ -26,4 +26,6 @@ I have editted the Promtail docker image for rsyslog reception. The rsyslog mess
     <td>bloedlink/promtail_rsyslog:latest</td>
   </tr>
 </table>
+<br>
+<p>If you wish to copy this setup make sure to glance over the persistent volumes specified in the docker compose file</p>
 
