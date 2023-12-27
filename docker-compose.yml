@@ -1,0 +1,44 @@
+version: "3"
+
+networks:
+  loki:
+
+services:
+  loki:
+    image: grafana/loki:2.9.0
+    ports:
+      - "3100:3100"
+    volumes:
+      - /nfs/loki/config:/etc/loki
+      - /nfs/loki:/loki
+    networks:
+      - loki
+    environment:
+      - TZ=Europe/Brussels
+
+  promtail:
+    image: bloedlink/promtail_rsyslog:latest
+    volumes:
+      - /nfs/promtail/var/log:/var/log
+      - /nfs/promtail:/etc/promtail
+    networks:
+      - loki
+    environment:
+      - TZ=Europe/Brussels
+    ports:
+      - "514:514/udp"
+      - "514:514/tcp"
+
+  grafana:
+    environment:
+      - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - TZ=Europe/Brussels
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - loki
+    volumes:
+      - /nfs/grafana:/etc/grafana/provisioning
