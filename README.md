@@ -11,7 +11,6 @@ I have editted the Promtail docker image for rsyslog reception. The rsyslog mess
     <th>Version</th>
   </tr>
   <tr>
-  <tr>
     <th>Grafana</th>
     <th>https://hub.docker.com/r/grafana/grafana</th>
     <th>grafana/grafana:latest</th>
