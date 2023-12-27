@@ -7,13 +7,13 @@ I have editted the Promtail docker image for rsyslog reception. The rsyslog mess
 <table>
   <tr>
     <th>Name</th>
-    <th>Url</th>
-    <th>Version</th>
+    <td>Url</th>
+    <td>Version</th>
   </tr>
   <tr>
     <th>Grafana</th>
-    <th>https://hub.docker.com/r/grafana/grafana</th>
-    <th>grafana/grafana:latest</th>
+    <td>https://hub.docker.com/r/grafana/grafana</th>
+    <td>grafana/grafana:latest</th>
   </tr>
   <tr>
     <th>Loki</th>
