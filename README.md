@@ -6,21 +6,19 @@ I have editted the Promtail docker image for rsyslog reception. The rsyslog mess
 
 <table>
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
+    <th>Grafana</th>
+    <th>https://hub.docker.com/r/grafana/grafana</th>
+    <th>grafana/grafana:latest</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
+    <th>Loki</th>
+    <td>https://hub.docker.com/r/grafana/loki</td>
+    <td>grafana/loki:2.9.0</td>
   </tr>
   <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
+    <th>Promtail</th>
+    <td>https://hub.docker.com/r/bloedlink/promtail_rsyslog</td>
+    <td>bloedlink/promtail_rsyslog:latest</td>
   </tr>
 </table>
-<p>Grafana image:  https://hub.docker.com/r/grafana/grafana:latest</p>
-<p>Loki https://hub.docker.com/r/grafana/loki image: grafana/loki:2.9.0</p>
-<p>Promtail image: https://hub.docker.com/r/bloedlink/promtail_rsyslog:latest</p>
+
